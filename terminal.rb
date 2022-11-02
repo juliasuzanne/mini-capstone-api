@@ -1,9 +1,12 @@
 require "http"
 require "tty-table"
+require "tty-prompt"
 
-response = HTTP.get("http://localhost:3000/all_products")
+prompt = TTY::Prompt.new
 
-first = HTTP.get("http://localhost:3000/products")
+page = prompt.select("Which page would you like to visit?", %w(products products/:id))
+
+response = HTTP.get("http://localhost:3000/#{page}")
 
 response = response.parse(:json)
 first = first.parse(:json)
