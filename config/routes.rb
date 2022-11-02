@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get "/products", controller: "products", action: "show_products"
 
   get "/all_products", controller: "products", action: "show_all"
+
+  get "/one_product/:id" => "products#one_product"
 end
