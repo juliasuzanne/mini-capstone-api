@@ -39,12 +39,11 @@ Content-Type: application/json
 # }
 
 ####
-PATCH http://localhost:3000/products/5
+PATCH http://localhost:3000/products/2
 Content-Type: application/json
 
 {
-  "image_url": "A box",
-  "description": "It's big."
+  "image_url": "https://earthpigpottery.files.wordpress.com/2019/02/collapsed-pot.jpg"
 }
 
 ###
