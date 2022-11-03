@@ -37,3 +37,12 @@ Content-Type: application/json
 #   "image_url": ,
 #   "description": 
 # }
+
+####
+PATCH http://localhost:3000/products/5
+Content-Type: application/json
+
+{
+  "image_url": "A box",
+  "description": "It's big."
+}
