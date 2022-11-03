@@ -46,3 +46,6 @@ Content-Type: application/json
   "image_url": "A box",
   "description": "It's big."
 }
+
+###
+DELETE http://localhost:3000/products/3
