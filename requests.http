@@ -1,0 +1,39 @@
+GET http://localhost:3000/products
+
+###
+GET http://localhost:3000/products/2
+
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Something shiny",
+  "price": 1000,
+  "image_url": "Test url",
+  "description": "It's too shiny to see what it is." 
+}
+
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "A box",
+  "price": 0,
+  "image_url": "Image",
+  "description": "It could be big enough to store your ego."
+}
+
+# ###
+# POST http://localhost:3000/products
+# Content-Type: application/json
+
+# {
+#   "name":,
+#   "price": ,
+#   "image_url": ,
+#   "description": 
+# }
