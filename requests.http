@@ -5,7 +5,7 @@ GET http://localhost:3000/products/4.json
 
 
 ###
-POST http://localhost:3000/products
+POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
@@ -17,14 +17,14 @@ Content-Type: application/json
 
 
 ###
-POST http://localhost:3000/products
+POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "A box",
-  "price": 0,
+  "name": "Lampshade",
+  "price": 110,
   "image_url": "Image",
-  "description": "It could be big enough to store your ego."
+  "description": "What can you do with this?"
 }
 
 # ###
@@ -39,11 +39,11 @@ Content-Type: application/json
 # }
 
 ####
-PATCH http://localhost:3000/products/4
+PATCH http://localhost:3000/products/4.json
 Content-Type: application/json
 
 {
-  "price": 12
+  "price": 1000
 }
 
 ###

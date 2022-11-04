@@ -10,27 +10,27 @@ class ProductsController < ApplicationController
   end
 
   def create
-    product = Product.new(
+    @product = Product.new(
       name: params[:name],
       price: params[:price],
       image_url: params[:image_url],
       description: params[:description],
     )
-    product.save
-    render json: product.as_json
+    @product.save
+    render template: "products/show"
   end
 
   def update
     product_id = params[:id]
     product = Product.find_by(id: product_id)
-
+    @product = product
     product.name = params[:name] || product.name
     product.image_url = params[:image_url] || product.image_url
-    product.price = params[:price] || product.image_url
+    product.price = params[:price] || product.price
     product.description = params[:description] || product.description
 
     product.save
-    render json: product.as_json
+    render template: "products/show"
   end
 
   def destroy
