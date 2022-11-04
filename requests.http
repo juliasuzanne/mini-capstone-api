@@ -1,7 +1,7 @@
 GET http://localhost:3000/products
 
 ###
-GET http://localhost:3000/products/2
+GET http://localhost:3000/products/1
 
 
 ###
@@ -39,11 +39,11 @@ Content-Type: application/json
 # }
 
 ####
-PATCH http://localhost:3000/products/2
+PATCH http://localhost:3000/products/4
 Content-Type: application/json
 
 {
-  "image_url": "https://earthpigpottery.files.wordpress.com/2019/02/collapsed-pot.jpg"
+  "price": 12
 }
 
 ###
