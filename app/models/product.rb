@@ -4,17 +4,19 @@ class Product < ApplicationRecord
   end
 
   def is_discounted?
-    discount = false
-    discount = true if price < 10
+    price < 10
+  end
+
+  def friendly_updated_at
+    updated_at.strftime("%B %e, %Y")
   end
 
   def tax
-    tax = 0
     tax = price * 0.09
-    tax.round(2)
+    tax.floor(2)
   end
 
   def total
-    total = price + tax
+    price + tax
   end
 end
