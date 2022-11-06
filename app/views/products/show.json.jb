@@ -7,6 +7,4 @@
   total: @product.total,
   description: @product.description,
   name: @product.name
-
-
 }
