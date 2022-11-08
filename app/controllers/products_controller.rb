@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
       description: params[:description],
     )
     @product.save
-    render template: "products/show"
+    render json: @product.as_json
   end
 
   def update

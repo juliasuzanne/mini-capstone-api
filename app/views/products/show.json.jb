@@ -1,7 +1,7 @@
 {
   id: @product.id,
-  friendly_created_at: @product.friendly_created_at,
-  friendly_updated_at: @product.friendly_updated_at,
+  friendly_created_at: @product.friendly_created_at || @product.created_at,
+  friendly_updated_at: @product.friendly_updated_at || @product.updated_at,
   price: @product.price,
   tax: @product.tax,
   total: @product.total,
