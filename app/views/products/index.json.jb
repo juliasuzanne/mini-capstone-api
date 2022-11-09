@@ -4,7 +4,8 @@
     name: product.name,
     description: product.description,
     price: product.price,
-    friendly_created_at: product.friendly_created_at
+    friendly_created_at: product.friendly_created_at,
+    supplier: product.supplier
 
   }
 

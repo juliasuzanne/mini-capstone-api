@@ -5,6 +5,7 @@
   price: @product.price,
   tax: @product.tax,
   total: @product.total,
+  suppliers: @product.supplier,
   description: @product.description,
   name: @product.name
 }

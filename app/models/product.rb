@@ -27,6 +27,6 @@ class Product < ApplicationRecord
 
   def supplier
     #can find supplier name with this method
-    Supplier.find(id: supplier_id)
+    Supplier.find_by(id: supplier_id)
   end
 end
