@@ -43,8 +43,32 @@ PATCH http://localhost:3000/products/4.json
 Content-Type: application/json
 
 {
-  "price": -200
+  "price": 200
 }
 
 ###
 DELETE http://localhost:3000/products/3
+
+###
+POST http://localhost:3000/suppliers.json
+Content-Type: application/json
+
+{
+  "name": "Lampshade",
+  "email": "lampshades@test.com",
+  "phone_number": "617-900-9872"
+}
+
+###
+PATCH http://localhost:3000/suppliers/4.json
+Content-Type: application/json
+
+{
+  "name": "Lampshades"
+}
+
+###
+GET http://localhost:3000/suppliers.json 
+
+###
+GET http://localhost:3000/suppliers/4.json 
