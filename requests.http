@@ -72,3 +72,14 @@ GET http://localhost:3000/suppliers.json
 
 ###
 GET http://localhost:3000/suppliers/4.json 
+
+
+### Create new image
+POST http://localhost:3000/images.json 
+Content-Type: application/json 
+
+{
+  "url": "https://i.etsystatic.com/17498104/r/il/373407/3008335036/il_1588xN.3008335036_eqbt.jpg",
+  "product_id": 9,
+  "description": "It is what it is"
+}
