@@ -24,4 +24,9 @@ class Product < ApplicationRecord
   def total
     price + tax
   end
+
+  def supplier
+    #can find supplier name with this method
+    Supplier.find(id: supplier_id)
+  end
 end
