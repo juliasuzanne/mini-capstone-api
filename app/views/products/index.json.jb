@@ -5,7 +5,8 @@
     description: product.description,
     price: product.price,
     friendly_created_at: product.friendly_created_at,
-    supplier: product.supplier
+    suppliers: product.supplier,
+    images: product.images
 
   }
 
