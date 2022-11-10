@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  has_many :images
+  belongs_to :supplier
   validates :name, presence: true
   validates :price, presence: true, numericality: { greater_than: 0 }
   validates :description, length: { in: 10..500 }
@@ -22,14 +24,5 @@ class Product < ApplicationRecord
 
   def total
     price + tax
-  end
-
-  def supplier
-    #can find supplier name with this method
-    Supplier.find_by(id: supplier_id)
-  end
-
-  def images
-    Image.where(product_id: id)
   end
 end
