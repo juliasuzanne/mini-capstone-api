@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   post "/images" => "images#create"
 
+  post "/users" => "users#create"
+
   # delete "/suppliers/:id" => "suppliers#destroy"
 
 end

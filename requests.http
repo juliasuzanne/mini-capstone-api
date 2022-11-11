@@ -83,3 +83,14 @@ Content-Type: application/json
   "product_id": 9,
   "description": "It is what it is"
 }
+
+####
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Nelson",
+  "email": "nelson1214@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
