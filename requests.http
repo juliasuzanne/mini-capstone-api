@@ -103,3 +103,7 @@ Content-Type: application/json
   "email": "nelson1214@test.com",
   "password": "password"
 }
+
+### Check if login is working by pp current_user from products#index route, shows up in terminal
+GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyMTg1ODN9.nyYABLhezJzWDR0k7XyuEw0J2Zalzlt6lK8LVNuusAU
