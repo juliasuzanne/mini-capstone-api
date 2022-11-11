@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   post "/users" => "users#create"
 
+  post "/sessions" => "sessions#create"
+
   # delete "/suppliers/:id" => "suppliers#destroy"
 
 end
