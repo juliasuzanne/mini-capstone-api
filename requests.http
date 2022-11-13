@@ -95,6 +95,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0Mzk4M
 }
 
 ###
+
+#### Show one order
 GET http://localhost:3000/orders/1.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0Mzk4MzB9.7JizAXqIxBVnS8B8xRdr03h2A9ZrMy_3BPUw4I52ZbU
 Content-Type: application/json
@@ -105,10 +107,14 @@ Content-Type: application/json
 
 
 ###
+
+### Show all orders (index)
 GET http://localhost:3000/orders.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0Mzk4MzB9.7JizAXqIxBVnS8B8xRdr03h2A9ZrMy_3BPUw4I52ZbU
 
 ####
+
+##Create new user
 POST http://localhost:3000/users.json
 Content-Type: application/json
 

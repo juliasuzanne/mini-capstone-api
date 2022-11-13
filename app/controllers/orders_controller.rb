@@ -8,8 +8,11 @@ class OrdersController < ApplicationController
       tax: Product.find(params[:product_id]).tax,
       subtotal: Product.find(params[:product_id]).total + Product.find(params[:product_id]).tax,
     )
-    order.save
-    render json: order.as_json
+    if order.save
+      render json: order.as_json
+    else
+      render json: { message: order.errors.full_messages }, status: 422
+    end
   end
 
   def show
@@ -17,7 +20,7 @@ class OrdersController < ApplicationController
     if current_user.id == order.user_id
       render json: order.as_json
     else
-      # .   -----------
+      render json: { message: "Please login" }
     end
   end
 
