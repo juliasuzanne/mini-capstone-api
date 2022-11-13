@@ -1,6 +1,11 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0NDk0NTd9.IFnvOEWM7aEln17DeT0Y4saIHh_sXssm-BvL-2bF0a8
+
+
+#PRODUCTS
+
 GET http://localhost:3000/products.json
 
-###
+### products#show
 GET http://localhost:3000/products/4.json
 
 
@@ -50,6 +55,9 @@ Content-Type: application/json
 DELETE http://localhost:3000/products/3
 
 ###
+
+
+#SUPPLIERS
 POST http://localhost:3000/suppliers.json
 Content-Type: application/json
 
@@ -74,7 +82,7 @@ GET http://localhost:3000/suppliers.json
 GET http://localhost:3000/suppliers/4.json 
 
 
-### Create new image
+### IMAGES
 POST http://localhost:3000/images.json 
 Content-Type: application/json 
 
@@ -84,10 +92,11 @@ Content-Type: application/json
   "description": "It is what it is"
 }
 
-### Create a new order
+### ORDERS
+#orders#create
 POST http://localhost:3000/orders.json 
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Njg0NTA5MjJ9.MsdqKTJq6wJ3lI5ksgYuKHWz9ccHSAVg7kSQzsbWypg
+Authorization: Bearer {{jwt}}
 
 {
   "product_id": 4,
@@ -96,9 +105,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Njg0NTA5M
 
 ###
 
-#### Show one order
+#### orders#show
 GET http://localhost:3000/orders/4.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0Mzk4MzB9.7JizAXqIxBVnS8B8xRdr03h2A9ZrMy_3BPUw4I52ZbU
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -108,14 +117,12 @@ Content-Type: application/json
 
 ###
 
-### Show all orders (index)
+### orders#index
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0NDk0NTd9.IFnvOEWM7aEln17DeT0Y4saIHh_sXssm-BvL-2bF0a8
+Authorization: Bearer {{jwt}}
 
-
-####
-
-##Create new user
+### USERS
+# users@create
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
@@ -126,7 +133,9 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
-### Sessions create (login)
+
+### SESSIONS
+### start new session (login)
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
@@ -137,4 +146,4 @@ Content-Type: application/json
 
 ### Check if login is working by pp current_user from products#index route, shows up in terminal
 GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0Mzk4MzB9.7JizAXqIxBVnS8B8xRdr03h2A9ZrMy_3BPUw4I52ZbU
+Authorization: Bearer {{jwt}}
