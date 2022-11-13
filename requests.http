@@ -84,6 +84,30 @@ Content-Type: application/json
   "description": "It is what it is"
 }
 
+### Create a new order
+POST http://localhost:3000/orders.json 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0Mzk4MzB9.7JizAXqIxBVnS8B8xRdr03h2A9ZrMy_3BPUw4I52ZbU
+
+{
+  "product_id": 1,
+  "quantity": 2
+}
+
+###
+GET http://localhost:3000/orders/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0Mzk4MzB9.7JizAXqIxBVnS8B8xRdr03h2A9ZrMy_3BPUw4I52ZbU
+Content-Type: application/json
+
+{
+  "order_id": 1
+}
+
+
+###
+GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0Mzk4MzB9.7JizAXqIxBVnS8B8xRdr03h2A9ZrMy_3BPUw4I52ZbU
+
 ####
 POST http://localhost:3000/users.json
 Content-Type: application/json
@@ -106,4 +130,4 @@ Content-Type: application/json
 
 ### Check if login is working by pp current_user from products#index route, shows up in terminal
 GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyMTg1ODN9.nyYABLhezJzWDR0k7XyuEw0J2Zalzlt6lK8LVNuusAU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0Mzk4MzB9.7JizAXqIxBVnS8B8xRdr03h2A9ZrMy_3BPUw4I52ZbU
