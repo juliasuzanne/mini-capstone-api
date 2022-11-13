@@ -1,4 +1,7 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user
+  before_action :authenticate_admin, except: [:index, :show]
+
   def create
     price = Product.find(params[:product_id]).price
     subtotal = price * params[:quantity]
@@ -21,16 +24,19 @@ class OrdersController < ApplicationController
   end
 
   def show
-    order = Order.find_by(id: params["id"])
-    if current_user.id == order.user_id
-      render json: order.as_json
-    else
-      render json: { message: "Please login" }
-    end
+    @order = current_user.orders.find_by(id: params[:id])
+    render template: "orders/show"
+    # @order = Order.find_by(id: params["id"])
+    # if current_user.id == @order.user_id
+    #   render template: "orders/show"
+    # else
+    #   render json: { message: "Please login" }
+    # end
   end
 
   def index
-    orders = Order.where(user_id: current_user.id)
-    render json: orders.as_json
+    # orders = Order.where(user_id: current_user.id)
+    @orders = current_user.orders
+    render template: "orders/index"
   end
 end

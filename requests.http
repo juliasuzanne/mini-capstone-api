@@ -87,17 +87,17 @@ Content-Type: application/json
 ### Create a new order
 POST http://localhost:3000/orders.json 
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0Mzk4MzB9.7JizAXqIxBVnS8B8xRdr03h2A9ZrMy_3BPUw4I52ZbU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Njg0NTA5MjJ9.MsdqKTJq6wJ3lI5ksgYuKHWz9ccHSAVg7kSQzsbWypg
 
 {
-  "product_id": 1,
-  "quantity": 2
+  "product_id": 4,
+  "quantity": 10
 }
 
 ###
 
 #### Show one order
-GET http://localhost:3000/orders/1.json
+GET http://localhost:3000/orders/4.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0Mzk4MzB9.7JizAXqIxBVnS8B8xRdr03h2A9ZrMy_3BPUw4I52ZbU
 Content-Type: application/json
 
@@ -110,7 +110,8 @@ Content-Type: application/json
 
 ### Show all orders (index)
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0Mzk4MzB9.7JizAXqIxBVnS8B8xRdr03h2A9ZrMy_3BPUw4I52ZbU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0NDk0NTd9.IFnvOEWM7aEln17DeT0Y4saIHh_sXssm-BvL-2bF0a8
+
 
 ####
 
@@ -130,7 +131,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "nelson1214@test.com",
+  "email": "juliagrimes@test.com",
   "password": "password"
 }
 
