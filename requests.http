@@ -3,7 +3,7 @@
 
 #PRODUCTS
 
-GET http://localhost:3000/products.json
+GET http://localhost:3000/products.json?category=random
 
 ### products#show
 GET http://localhost:3000/products/4.json

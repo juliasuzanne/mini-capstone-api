@@ -6,6 +6,7 @@
   tax: @product.tax,
   total: @product.total,
   suppliers: @product.supplier,
+  categories: @product.categories,
   images: @product.images,
   description: @product.description,
   name: @product.name

@@ -3,6 +3,7 @@
     id: product.id,
     name: product.name,
     description: product.description,
+    categories: product.categories,
     price: product.price,
     friendly_created_at: product.friendly_created_at,
     suppliers: product.supplier,
