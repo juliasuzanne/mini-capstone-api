@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   has_many :images
-  has_many :orders
+  has_many :carted_products
+  has_many :orders, through: :carted_products
   belongs_to :supplier
   has_many :category_products #order matters here, category_products below
   has_many :categories, through: :category_products #replaces categories method which calls all the categories for each product called
