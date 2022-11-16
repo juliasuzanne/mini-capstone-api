@@ -1,11 +1,23 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Njg0NDk0NTd9.IFnvOEWM7aEln17DeT0Y4saIHh_sXssm-BvL-2bF0a8
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Njg2NTQ2NzR9.oPuXP8RNmIM018AU5FjOeBBDRmmOWtcOd2Cf6z_EkU8
 
+### CARTED_PRODUCTS
 
-#PRODUCTS
+# carted_products#create
+POST http://localhost:3000/carted_products.json 
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "product_id": 1,
+  "quantity": 2,
+  "status": "carted"
+}
+
+### PRODUCTS
 
 GET http://localhost:3000/products.json?category=random
 
-### products#show
+  ### products#show
 GET http://localhost:3000/products/4.json
 
 
@@ -32,18 +44,18 @@ Content-Type: application/json
   "description": "What can you do with this?"
 }
 
-# ###
-# POST http://localhost:3000/products
-# Content-Type: application/json
+  # ###
+  # POST http://localhost:3000/products
+  # Content-Type: application/json
 
-# {
-#   "name":,
-#   "price": ,
-#   "image_url": ,
-#   "description": 
-# }
+  # {
+  #   "name":,
+  #   "price": ,
+  #   "image_url": ,
+  #   "description": 
+  # }
 
-####
+  ####
 PATCH http://localhost:3000/products/4.json
 Content-Type: application/json
 
@@ -51,13 +63,13 @@ Content-Type: application/json
   "price": 200
 }
 
-###
+  ###
 DELETE http://localhost:3000/products/3
 
 ###
 
 
-#SUPPLIERS
+### SUPPLIERS
 POST http://localhost:3000/suppliers.json
 Content-Type: application/json
 
@@ -93,49 +105,50 @@ Content-Type: application/json
 }
 
 ### ORDERS
-#orders#create
+  #orders#create
 POST http://localhost:3000/orders.json 
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
   "product_id": 4,
-  "quantity": 10
+   "quantity": 10
 }
 
-###
+  ###
 
-#### orders#show
+  #### orders#show
 GET http://localhost:3000/orders/4.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
-{
-  "order_id": 1
-}
+  {
+    "order_id": 1
+  }
 
 
-###
+  ###
 
-### orders#index
-GET http://localhost:3000/orders.json
-Authorization: Bearer {{jwt}}
+  ### orders#index
+  GET http://localhost:3000/orders.json
+  Authorization: Bearer {{jwt}}
 
 ### USERS
-# users@create
-POST http://localhost:3000/users.json
-Content-Type: application/json
+  # users@create
+  POST http://localhost:3000/users.json
+  Content-Type: application/json
 
-{
-  "name": "Nelson",
-  "email": "nelson1214@test.com",
-  "password": "password",
-  "password_confirmation": "password"
-}
+  {
+    "name": "Nelson",
+    "email": "nelson1214@test.com",
+    "password": "password",
+    "password_confirmation": "password"
+  }
 
 
 ### SESSIONS
-### start new session (login)
+
+  ### start new session (login)
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
@@ -145,5 +158,6 @@ Content-Type: application/json
 }
 
 ### Check if login is working by pp current_user from products#index route, shows up in terminal
+  ###
 GET http://localhost:3000/products.json
 Authorization: Bearer {{jwt}}
