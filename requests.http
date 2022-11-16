@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Njg2NTQ2NzR9.oPuXP8RNmIM018AU5FjOeBBDRmmOWtcOd2Cf6z_EkU8
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Njg2NTU5OTR9.H_IjYuQxkPNP1kGqC1kSWNWyMqiwvz-21YrYHJvTrZU
 
 ### CARTED_PRODUCTS
 
@@ -8,10 +8,13 @@ Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "product_id": 1,
-  "quantity": 2,
-  "status": "carted"
+  "product_id": 2,
+  "quantity": 1
 }
+
+### carted_products#index
+GET http://localhost:3000/carted_products.json
+Authorization: Bearer {{jwt}}
 
 ### PRODUCTS
 
